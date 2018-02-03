@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Добавити замовлення</title>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid" style="max-width:400px">
+        <form action="JavaScript:findUser()" id="form2">
+          <div class="form-group">
+            <label>Номер телефону профіля замовника:</label>
+            <input type="text" class="form-control" id="phone">
+          </div>
+
+          <button type="submit" class="btn btn-default">Знайти</button>
+        </form>
+
+        <label id="infolabel"></label>
+
+        <form action="JavaScript:writeOrder()" id="form3">
+          <div class="form-group">
+            <label>Номер телефону для доставки:</label>
+            <input type="text" class="form-control" id="phone1">
+          </div>
+          <div class="form-group">
+            <label>Адрес доставки:</label>
+            <input type="text" class="form-control" id="address">
+          </div>
+          <div class="form-group">
+            <label>Товар:</label>
+            <input type="text" class="form-control" id="goods">
+          </div>
+          <div class="form-group">
+            <label>Вартість:</label>
+            <input type="text" class="form-control" id="price">
+          </div>
+          <div class="form-group">
+            <label>Додатковий коментар:</label>
+            <input type="text" class="form-control" id="comment">
+          </div>
+
+          <button type="submit" class="btn btn-default">Відправити</button>
+        </form>
+        <label id="infolabel1"></label>
+    </div>
+
+  </body>
+</html>

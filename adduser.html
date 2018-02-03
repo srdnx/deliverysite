@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Добавити користувача</title>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container-fluid" style="max-width:400px">
+        <form action="JavaScript:writeUserData()" id="form1">
+          <div class="form-group">
+            <label>ПІБ:</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label>Номер телефону:</label>
+            <input type="text" class="form-control" id="phone">
+          </div>
+          <div class="form-group">
+            <label>Паспортні дані (серія, номер, ким і коли виданий):</label>
+            <input type="text" class="form-control" id="passport">
+          </div>
+          <div class="form-group">
+            <label>Адрес:</label>
+            <input type="text" class="form-control" id="address">
+          </div>
+          <div class="form-group">
+            <label>Наявність пільг:</label>
+            <input type="checkbox" id="privilegies">
+          </div>
+          <div class="form-group">
+            <label>Номер банківської карти:</label>
+            <input type="text" class="form-control" id="card">
+          </div>
+
+          <button type="submit" class="btn btn-default">Відправити</button>
+        </form>
+        <label id="infolabel"></label>
+    </div>
+
+  <script src="app.js"></script>
+  </body>
+</html>
