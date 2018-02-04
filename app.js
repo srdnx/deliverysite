@@ -44,16 +44,14 @@ function findUser() {
   var tgform = document.forms['form3'];
   var value = form.elements['phone'].value;
   firebase.database().ref('users').orderByChild('phone').equalTo(value).on("value", function(snapshot) {
-    var result;
     for(var a in snapshot.val()) {
-      result = a;
       userid = a;
     }
-    if (result != undefined) {
-      username = snapshot.val()[result]['name'];
-      document.getElementById('phone1').value = snapshot.val()[result]['phone'];
-      document.getElementById('address').value = snapshot.val()[result]['address'];
-      document.getElementById('infolabel').innerHTML = 'Користувача ' + snapshot.val()[result]['name'] + ' було знайдено';
+    if (userid != undefined) {
+      username = snapshot.val()[userid]['name'];
+      document.getElementById('phone1').value = snapshot.val()[userid]['phone'];
+      document.getElementById('address').value = snapshot.val()[userid]['address'];
+      document.getElementById('infolabel').innerHTML = 'Користувача ' + snapshot.val()[userid]['name'] + ' було знайдено';
     } else {
       document.getElementById('infolabel').innerHTML = 'Користувача за цим номером телефона не знайдено';
     }
