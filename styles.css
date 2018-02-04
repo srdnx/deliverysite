@@ -9,3 +9,8 @@
 .inner-element {
   margin: 5px auto;
 }
+
+.btn {
+  background-color: #FFF510;
+  width: 100%;
+}
