@@ -69,6 +69,7 @@ function writeOrder() {
       userid: userid,
       phone: form.elements['phone1'].value,
       address: form.elements['address'].value,
+      coordinates: form.elements['coordinates'].value,
       goods: form.elements['goods'].value,
       price: form.elements['price'].value,
       comment: form.elements['comment'].value,
