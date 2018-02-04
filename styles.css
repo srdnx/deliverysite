@@ -1,0 +1,11 @@
+.custom-style {
+  max-width: 400px;
+  background-color: #F3F3F3;
+  border-radius: 5px;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.inner-element {
+  margin: 5px auto;
+}
